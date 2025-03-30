@@ -10,6 +10,8 @@
         <ul class="navbar-nav">
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('homepage') }}">Homepage</a>
+                <a class="nav-link" href="{{ route('homepage') }}">Login</a>
+                <a class="nav-link" href="{{ route('homepage') }}">Logout</a>
             </li>
         </nav>
         
