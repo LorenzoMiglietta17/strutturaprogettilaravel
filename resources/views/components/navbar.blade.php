@@ -12,13 +12,16 @@
                 <a class="nav-link" href="{{ route('homepage') }}">Homepage</a>
                 <a class="nav-link" href="{{ route('register') }}">Registrati</a>
                 <a class="nav-link" href="{{ route('login') }}">Login</a>
-                <a class="nav-link" href="{{ route('logout') }}">Logout</a>
                 @auth
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         Ciao, {{ Auth::user()->name }}
                     </a>
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <button type="submit" class="logout">Logout</button>
+                    </form>
             @endauth
             </li>
         </nav>
